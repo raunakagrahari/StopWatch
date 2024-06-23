@@ -7,7 +7,7 @@ const stopButton = document.getElementById("stopbtn");
 const pauseButton = document.getElementById("pausebtn");
 const resetButton = document.getElementById("resetbtn");
 
-const lapList = document.getElementById("laplist");
+let lapList = document.getElementById("laplist");
 
 let minutes = 0,
   seconds = 0,
@@ -42,6 +42,7 @@ function pauseTimer() {
 function resetTimer() {
     clearInterval(interval);
     resetTimerData()
+    lapList.innerHTML = ''
     startButton.disabled = false;
 }
 
